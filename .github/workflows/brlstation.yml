@@ -39,6 +39,8 @@ jobs:
               run: |
                 cd brlstation
                 ng build --base-href /angular/brlstation/
+                mkdir -p publish/brlstation
+                mv brlstation/dist/* publish/brlstation
                 
             - name: Commit and Push Dist Folder
               run: |
