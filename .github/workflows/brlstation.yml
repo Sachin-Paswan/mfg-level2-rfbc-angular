@@ -40,9 +40,5 @@ jobs:
                 cd brlstation
                 ng build --base-href /angular/brlstation/
 
-            - name: Move Build Artifacts
-              run: |
-                cp brlstation/dist/* dist/brlstation/
-
             
         
