@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "http://akrgmitcti002.na.goodyear.com",
+    "secure": false,
+    "changeOrignin": true
+  }
+}

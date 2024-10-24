@@ -1,0 +1,23 @@
+.page-header h3 {
+  font-weight: 800;
+  text-align: center;
+}
+
+.f-right {
+  float: right;
+}
+
+.page-body {
+  padding: 10px 40px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.mat-mdc-header-row {
+  background-color: #0c4580 !important;
+  color: #fff;
+}
+
+.mat-mdc-row:nth-child(even) {
+  background-color: #eee !important;
+}

@@ -1,0 +1,24 @@
+<div class="modal-container">
+  <div class="modal-dialog">
+
+    <div mat-dialog-title>
+      <h4>{{ data.ID != 0 ? 'Update BRL Station' : 'Add New BRL Station' }}</h4>
+    </div>
+
+    <div mat-dialog-content>
+      <mat-form-field>
+        <mat-label>Station Name</mat-label>
+        <input matInput [(ngModel)]="data.NAME">
+        <mat-icon aria-hidden="false" fontIcon="business" matSuffix></mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions align="center">
+      <button (click)="addOrEditBrlStation(data)" mat-flat-button [mat-dialog-close]="data">
+        {{ data.ID != 0 ? 'Update': 'Submit' }}
+      </button>
+      <button mat-flat-button mat-dialog-close="true" color="warn">Cancel</button>
+    </div>
+
+  </div>
+</div>
