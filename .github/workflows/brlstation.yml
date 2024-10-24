@@ -42,7 +42,7 @@ jobs:
 
             - name: Move Build Artifacts
               run: |
-                mv brlstation/dist/* brlstation/dist/
+                cp brlstation/dist/* dist/brlstation/
 
             
         
