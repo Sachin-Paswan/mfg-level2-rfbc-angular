@@ -17,6 +17,11 @@ jobs:
               uses: actions/setup-node@v2
               with:
                 node-version: '20'
+
+            - name: Configure npm for Github Packages
+              run: |
+                  echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+                  echo "@Sachin-Paswan:registry-https://npm.pkg.github.com" >> ~/.npmrc
                 
             - name: Install Angular
               run: |
