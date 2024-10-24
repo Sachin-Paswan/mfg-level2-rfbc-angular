@@ -21,7 +21,7 @@ jobs:
             - name: Install dependencies
               run: |
                 cd brlstation
-                npm install
+                npm install @angular/cli
                 
             - name: Build Angular App
               run: |
