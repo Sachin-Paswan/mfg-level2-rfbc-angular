@@ -39,6 +39,9 @@ jobs:
               run: |
                 cd brlstation
                 ng build --base-href /angular/brlstation/
+
+            - name: Move Build Dist Folder
+              run: |
                 mkdir -p publish/brlstation
                 mv brlstation/dist/* publish/brlstation
                 
