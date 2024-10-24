@@ -42,8 +42,8 @@ jobs:
 
             - name: Move Build Dist Folder
               run: |
-                mkdir -p publish/brlstation
-                mv brlstation/dist/* publish/brlstation
+                mkdir -p publish
+                mv brlstation/dist/* publish/
                 
             - name: Commit and Push Dist Folder
               run: |
