@@ -22,7 +22,10 @@ jobs:
               run: |
                   echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
                   echo "@Sachin-Paswan:registry-https://npm.pkg.github.com" >> ~/.npmrc
-                
+                  
+            - name: Check .npmrc
+              run: cat ~/.npmrc
+              
             - name: Install Angular
               run: |
                 npm install -g @angular/cli
@@ -36,6 +39,10 @@ jobs:
               run: |
                 cd brlstation
                 ng build --base-href /angular/brlstation/
+
+            - name: Move Build Artifacts
+              run: |
+                mv brlstation/dist/* brlstation/dist/
                 
             - name: Publish Build Files to Github Packages
               run: |
