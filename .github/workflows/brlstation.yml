@@ -26,7 +26,7 @@ jobs:
             - name: Build Angular App
               run: |
                 cd brlstation
-                npm run build --base-href /angular/brlstation/
+                ng build --base-href /angular/brlstation/
                 
             - name: Publish Build Files to Github Packages
               run: |
