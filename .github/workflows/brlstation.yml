@@ -43,23 +43,6 @@ jobs:
             - name: Move Build Artifacts
               run: |
                 mv brlstation/dist/* brlstation/dist/
-                
-            - name: Publish Build Files to Github Packages
-              run: |
-                cd brlstation
-                npm publish --access public
-              
-            - name: Get version from package.json
-              id: get_version
-              run: |
-                version=$(jq -r '.version' brlstation/package.json)
-                echo "Version: $version"
-                echo "::set-output name=version::$version"
-                
-            - name: Create Git Tag
-              run: |
-                git tag v${{ steps.get_version.outputs.version }}
-                git push origin v${{ steps.get_version.putputs.version }}
 
             
         
